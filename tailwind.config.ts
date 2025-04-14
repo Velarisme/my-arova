@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,43 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+                // Sameira brand colors
+                sage: {
+                    50: '#f2f5f0',
+                    100: '#e6ebe2',
+                    200: '#d1dac9',
+                    300: '#b4c4a8',
+                    400: '#96af85',
+                    500: '#7d9968',
+                    600: '#677f53',
+                    700: '#536443',
+                    800: '#465238',
+                    900: '#3c4531',
+                },
+                sand: {
+                    50: '#f9f7f4',
+                    100: '#f3efe8',
+                    200: '#e8e0d1',
+                    300: '#d9c9af',
+                    400: '#c7b087',
+                    500: '#b69867',
+                    600: '#a58453',
+                    700: '#8a6c45',
+                    800: '#715a3c',
+                    900: '#5e4b34',
+                },
+                lemon: {
+                    50: '#f9fae5',
+                    100: '#f3f5c8',
+                    200: '#eaec97',
+                    300: '#dde15e',
+                    400: '#d2d435',
+                    500: '#c2c21d',
+                    600: '#a39f15',
+                    700: '#827a15',
+                    800: '#6b6018',
+                    900: '#5a5119',
+                },
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -63,6 +101,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Playfair Display', 'serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -84,11 +126,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: { 
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					to: { 
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 1s ease-out forwards'
 			}
 		}
 	},
