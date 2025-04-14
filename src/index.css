@@ -42,6 +42,10 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
@@ -72,4 +76,28 @@
     @apply opacity-0 animate-fade-in;
     animation-delay: 600ms;
   }
+  
+  /* Hover effect for links */
+  .hover-link {
+    @apply relative;
+  }
+  
+  .hover-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-sage-500 transition-all duration-300;
+  }
+  
+  .hover-link:hover::after {
+    @apply w-full;
+  }
+  
+  /* Image hover effect */
+  .image-hover {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  
+  .image-hover:hover {
+    @apply scale-105 brightness-110;
+  }
 }
+
