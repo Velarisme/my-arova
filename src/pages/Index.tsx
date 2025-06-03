@@ -5,6 +5,8 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Products from '@/components/Products';
+import Process from '@/components/Process';
+import Reviews from '@/components/Reviews';
 import Benefits from '@/components/Benefits';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -34,6 +36,8 @@ const Index = () => {
       <Hero />
       <About />
       <Products />
+      <Process />
+      <Reviews />
       <Benefits />
       <Contact />
       <Footer />
@@ -41,11 +45,11 @@ const Index = () => {
       {/* Scroll to top button */}
       <button 
         onClick={scrollToTop} 
-        className={`fixed bottom-6 right-6 w-10 h-10 bg-sage-700 text-white rounded-full flex items-center justify-center shadow-md hover:bg-sage-800 transition-all z-50 ${
+        className={`fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-sage-700 to-sage-800 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all z-50 ${
           showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}
       >
-        <ArrowUp size={18} />
+        <ArrowUp size={20} />
       </button>
     </div>
   );
