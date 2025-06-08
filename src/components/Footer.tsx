@@ -1,5 +1,5 @@
 
-import { Instagram, Facebook, Twitter, Leaf, Mail, MapPin, Phone } from 'lucide-react';
+import { Instagram, Facebook, Twitter, Leaf, Mail, MapPin, Phone, Package } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,10 +12,10 @@ const Footer = () => {
             <h3 className="font-serif text-xl font-medium mb-4 flex items-center">
               <Leaf size={18} className="mr-2" /> Arova
             </h3>
-            <p className="text-sage-200 text-sm">
-              From Earth to Essence: Premium organic essential oils crafted with care for your wellness and beauty rituals.
+            <p className="text-sage-200 text-sm mb-4">
+              From Earth to Essence: Premium fragrance oils crafted with intention for your wellness and luxury rituals.
             </p>
-            <div className="flex space-x-4 mt-6">
+            <div className="flex space-x-4">
               <a href="#" className="text-sage-300 hover:text-white transition transform hover:scale-110">
                 <Instagram size={20} />
               </a>
@@ -29,41 +29,45 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-medium mb-4 text-sage-100">Products</h4>
+            <h4 className="font-medium mb-4 text-sage-100">Our Blends</h4>
             <ul className="space-y-2 text-sm text-sage-300">
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Geranium Oil</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Lemongrass Oil</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Gift Sets</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Accessories</a></li>
+              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Digest</a></li>
+              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Breathe</a></li>
+              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Immune</a></li>
+              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Headspace</a></li>
+              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Sleep</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-medium mb-4 text-sage-100">Company</h4>
+            <h4 className="font-medium mb-4 text-sage-100">Quick Links</h4>
             <ul className="space-y-2 text-sm text-sage-300">
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Sustainability</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Press</a></li>
+              <li className="flex items-center">
+                <Package size={16} className="mr-2 flex-shrink-0" />
+                <a href="#" className="hover:text-white transition">Track Your Order</a>
+              </li>
+              <li className="flex items-center">
+                <Instagram size={16} className="mr-2 flex-shrink-0" />
+                <a href="#" className="hover:text-white transition">@ArovaEssence</a>
+              </li>
+              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Our Heritage</a></li>
+              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Farm Partners</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-medium mb-4 text-sage-100">Contact</h4>
-            <ul className="space-y-3 text-sm text-sage-300">
-              <li className="flex items-start">
-                <MapPin size={16} className="mr-2 mt-0.5 flex-shrink-0" />
-                <span>123 Nature Way, Botanical Gardens, BT12 3GL</span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={16} className="mr-2 flex-shrink-0" />
-                <span>+44 (0) 123 456 7890</span>
-              </li>
-              <li className="flex items-center">
-                <Mail size={16} className="mr-2 flex-shrink-0" />
-                <span>hello@arova-oils.com</span>
-              </li>
-            </ul>
+            <h4 className="font-medium mb-4 text-sage-100">Join the Arova Tribe</h4>
+            <p className="text-sage-300 text-sm mb-4">✨ Get exclusive access to new blends and wellness tips</p>
+            <div className="space-y-3">
+              <input 
+                type="email" 
+                placeholder="Your email" 
+                className="w-full px-3 py-2 bg-sage-700 border border-sage-600 rounded text-white placeholder-sage-400 focus:outline-none focus:border-sage-500"
+              />
+              <button className="w-full bg-gradient-to-r from-sage-600 to-sage-700 hover:from-sage-500 hover:to-sage-600 text-white px-4 py-2 rounded transition-all">
+                Join Newsletter
+              </button>
+            </div>
           </div>
         </div>
         

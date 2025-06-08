@@ -4,28 +4,25 @@ import { Star, Quote } from 'lucide-react';
 const Reviews = () => {
   const reviews = [
     {
-      name: "Isabella Chen",
+      name: "Riya M.",
+      location: "Pune", 
       rating: 5,
-      review: "Blue Calm has transformed my evening routine. The scent is absolutely divine and so calming. Worth every penny for this luxury experience.",
-      product: "Blue Calm"
+      review: "I've used many fragrance oils, but Arova's blends smell fresh and intentional. The Sleep blend has become part of my night ritual.",
+      product: "Sleep"
     },
     {
-      name: "Marcus Rodriguez",
+      name: "Aman K.",
+      location: "Delhi",
       rating: 5,
-      review: "Golden Sunset brings such warmth to our home. The quality is exceptional, and you can tell it's made with premium ingredients.",
-      product: "Golden Sunset"
+      review: "The Digest oil is incredible! I use it after heavy meals and feel so much lighter. You can tell these are made with real ingredients.",
+      product: "Digest"
     },
     {
-      name: "Sophia Williams",
+      name: "Priya S.",
+      location: "Mumbai",
       rating: 5,
-      review: "I've tried many fragrance oils, but Arova is in a league of its own. Forest Whisper makes me feel like I'm in a serene woodland.",
-      product: "Forest Whisper"
-    },
-    {
-      name: "David Park",
-      rating: 5,
-      review: "The steam distillation process really makes a difference. These oils are pure, potent, and long-lasting. Truly luxurious.",
-      product: "Blue Calm"
+      review: "Breathe has been a game-changer for my meditation practice. The quality is exceptional - pure, potent, and long-lasting.",
+      product: "Breathe"
     }
   ];
 
@@ -33,14 +30,14 @@ const Reviews = () => {
     <section className="section bg-gradient-to-b from-white to-sage-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="font-serif text-3xl md:text-5xl font-medium text-sage-900 mb-6">What Our Customers Say</h2>
+          <h2 className="font-serif text-3xl md:text-5xl font-medium text-sage-900 mb-6">Real Stories, Real Essence</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-sage-400 to-sage-600 mx-auto mb-8"></div>
           <p className="text-sage-700 text-lg leading-relaxed">
-            Experience the luxury through the words of those who have made Arova part of their daily rituals.
+            Experience luxury through the words of those who have made Arova part of their daily rituals.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {reviews.map((review, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="flex items-center mb-6">
@@ -59,7 +56,7 @@ const Reviews = () => {
               <div className="flex justify-between items-center">
                 <div>
                   <p className="font-semibold text-sage-900">{review.name}</p>
-                  <p className="text-sm text-sage-600">Verified Purchase</p>
+                  <p className="text-sm text-sage-600">{review.location}</p>
                 </div>
                 <div className="text-right">
                   <p className="text-sm font-medium text-sage-800">{review.product}</p>
@@ -68,6 +65,17 @@ const Reviews = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Luxury Quote Section */}
+        <div className="bg-gradient-to-r from-sage-100 to-sand-100 rounded-3xl p-12 text-center">
+          <blockquote className="font-serif text-2xl md:text-3xl font-medium text-sage-900 mb-8 italic">
+            "Luxury isn't loud — it's pure, purposeful, and rooted in nature."
+          </blockquote>
+          <div className="w-16 h-1 bg-gradient-to-r from-sage-400 to-sage-600 mx-auto mb-8"></div>
+          <button className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white px-8 py-4 rounded-lg text-lg font-medium shadow-lg hover:shadow-xl transition-all">
+            🌿 Start Your Ritual
+          </button>
         </div>
         
         <div className="text-center mt-16">

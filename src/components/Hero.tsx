@@ -3,6 +3,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Droplet } from 'lucide-react';
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-sage-50 via-sand-50 to-sage-100 -z-10"></div>
@@ -16,7 +20,7 @@ const Hero = () => {
       </div>
       
       <div className="container-custom relative">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <p className="text-sm md:text-base font-medium text-sage-600 mb-3 tracking-wider fade-in uppercase flex items-center">
             <Droplet size={16} className="mr-2 animate-bounce text-sage-700" style={{ animationDuration: '3s' }} />
             Premium Fragrance Oils
@@ -26,17 +30,24 @@ const Hero = () => {
             Arova – <span className="text-transparent bg-gradient-to-r from-sage-700 via-sage-600 to-sage-800 bg-clip-text">From Earth to Essence</span>
           </h1>
           
-          <p className="mt-6 text-xl md:text-2xl text-sage-700 max-w-2xl fade-in-delay-1 font-light leading-relaxed">
-            Crafted through traditional steam distillation, our luxury fragrance oils capture nature's most exquisite scents for an elevated sensory experience.
+          <p className="mt-6 text-xl md:text-2xl text-sage-700 max-w-3xl fade-in-delay-1 font-light leading-relaxed">
+            Crafted from rare botanicals and inspired by nature's purest rhythms, our fragrance oils are born on farms, refined in distilleries, and perfected through intentional blending. Feel the essence of real luxury.
           </p>
           
           <div className="mt-12 flex flex-wrap gap-6 fade-in-delay-2">
-            <Button className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white px-8 py-4 text-lg group shadow-lg hover:shadow-xl transition-all">
-              Discover Our Collection
+            <Button 
+              onClick={() => scrollToSection('products')}
+              className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white px-8 py-4 text-lg group shadow-lg hover:shadow-xl transition-all"
+            >
+              🌿 Discover Our Blends
               <ArrowRight size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="outline" className="border-2 border-sage-300 text-sage-800 hover:bg-sage-50 px-8 py-4 text-lg shadow-md hover:shadow-lg transition-all">
-              Our Distillation Process
+            <Button 
+              onClick={() => scrollToSection('process')}
+              variant="outline" 
+              className="border-2 border-sage-300 text-sage-800 hover:bg-sage-50 px-8 py-4 text-lg shadow-md hover:shadow-lg transition-all"
+            >
+              🔁 Our Farm-to-Bottle Process
             </Button>
           </div>
         </div>
