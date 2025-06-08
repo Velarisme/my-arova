@@ -47,7 +47,17 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply font-sans;
+    background: linear-gradient(135deg, 
+      hsl(40, 35%, 97%) 0%,
+      hsl(35, 25%, 95%) 25%,
+      hsl(110, 15%, 96%) 50%,
+      hsl(45, 20%, 94%) 75%,
+      hsl(40, 30%, 96%) 100%
+    );
+    background-attachment: fixed;
+    color: hsl(var(--foreground));
+    min-height: 100vh;
   }
 
   .section {
@@ -99,5 +109,11 @@
   .image-hover:hover {
     @apply scale-105 brightness-110;
   }
-}
 
+  /* Soothing background overlay */
+  .soothing-bg {
+    background: radial-gradient(circle at 20% 80%, rgba(120, 130, 104, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(184, 184, 132, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(166, 175, 133, 0.05) 0%, transparent 50%);
+  }
+}
