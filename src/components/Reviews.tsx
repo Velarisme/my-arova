@@ -81,14 +81,9 @@ const Reviews = () => {
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-sage-100 to-sand-100 rounded-2xl p-8 inline-block">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={20} className="text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <span className="text-2xl font-bold text-sage-900">4.9</span>
+              <span className="text-4xl font-bold text-sage-900">2,847+</span>
             </div>
-            <p className="text-sage-700 font-medium">Based on 847+ verified reviews</p>
+            <p className="text-sage-700 font-medium">Happy Customers & Counting</p>
           </div>
         </div>
       </div>
