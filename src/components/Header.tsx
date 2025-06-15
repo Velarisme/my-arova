@@ -1,11 +1,13 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X, Leaf, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useCart } from '@/contexts/CartContext';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { getTotalItems, setIsCartOpen } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,15 +33,42 @@ const Header = () => {
           <a href="#process" className="text-sage-800 hover:text-sage-600 transition font-medium">Process</a>
           <a href="#benefits" className="text-sage-800 hover:text-sage-600 transition font-medium">Benefits</a>
           <a href="#contact" className="text-sage-800 hover:text-sage-600 transition font-medium">Contact</a>
+          
+          {/* Cart Icon */}
+          <button 
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 text-sage-800 hover:text-sage-600 transition"
+          >
+            <ShoppingBag size={22} />
+            {getTotalItems() > 0 && (
+              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-sage-700 to-sage-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {getTotalItems()}
+              </span>
+            )}
+          </button>
+          
           <Button className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white shadow-lg hover:shadow-xl transition-all">
             Shop Luxury Oils
           </Button>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-sage-800" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center space-x-4">
+          <button 
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 text-sage-800"
+          >
+            <ShoppingBag size={22} />
+            {getTotalItems() > 0 && (
+              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-sage-700 to-sage-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {getTotalItems()}
+              </span>
+            )}
+          </button>
+          <button className="text-sage-800" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}

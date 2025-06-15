@@ -10,6 +10,7 @@ import Reviews from '@/components/Reviews';
 import Benefits from '@/components/Benefits';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Cart from '@/components/Cart';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -41,6 +42,7 @@ const Index = () => {
       <Benefits />
       <Contact />
       <Footer />
+      <Cart />
       
       {/* Scroll to top button */}
       <button 
