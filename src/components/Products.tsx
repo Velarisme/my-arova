@@ -3,11 +3,23 @@ import { Star } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/components/ui/use-toast';
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import ProductSkeleton from './ProductSkeleton';
 
 const Products = () => {
   const { addToCart } = useCart();
   const { toast } = useToast();
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Simulate loading for better UX
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const products = [
     {
@@ -79,6 +91,28 @@ const Products = () => {
     navigate(`/product/${productId}`);
   };
 
+  if (isLoading) {
+    return (
+      <section id="products" className="section bg-gradient-to-b from-white to-sage-50">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="font-serif text-3xl md:text-5xl font-medium text-sage-900 mb-6">Our Signature Collection</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-sage-400 to-sage-600 mx-auto mb-8"></div>
+            <p className="text-sage-700 text-lg leading-relaxed">
+              Fragrance oils designed to elevate your everyday rituals — each bottle a sensory journey.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-12">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <ProductSkeleton key={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="products" className="section bg-gradient-to-b from-white to-sage-50">
       <div className="container-custom">
@@ -92,7 +126,7 @@ const Products = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-12">
           {products.map((product, index) => (
-            <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group">
+            <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-1">
               <div 
                 className={`h-72 bg-gradient-to-br ${product.gradient} relative overflow-hidden cursor-pointer`}
                 onClick={() => handleViewProduct(product.id)}
