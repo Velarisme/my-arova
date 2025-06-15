@@ -1,12 +1,13 @@
-
 import { Button } from '@/components/ui/button';
 import { Star } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/components/ui/use-toast';
+import { useNavigate } from 'react-router-dom';
 
 const Products = () => {
   const { addToCart } = useCart();
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const products = [
     {
@@ -74,6 +75,10 @@ const Products = () => {
     });
   };
 
+  const handleViewProduct = (productId: string) => {
+    navigate(`/product/${productId}`);
+  };
+
   return (
     <section id="products" className="section bg-gradient-to-b from-white to-sage-50">
       <div className="container-custom">
@@ -88,7 +93,10 @@ const Products = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-12">
           {products.map((product, index) => (
             <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group">
-              <div className={`h-72 bg-gradient-to-br ${product.gradient} relative overflow-hidden`}>
+              <div 
+                className={`h-72 bg-gradient-to-br ${product.gradient} relative overflow-hidden cursor-pointer`}
+                onClick={() => handleViewProduct(product.id)}
+              >
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9')] bg-cover bg-center opacity-30 group-hover:scale-110 transition-transform duration-700"></div>
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
                   <div className="flex items-center gap-1">
@@ -104,7 +112,12 @@ const Products = () => {
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="font-serif text-2xl font-medium text-sage-900 mb-1">{product.name}</h3>
+                    <h3 
+                      className="font-serif text-2xl font-medium text-sage-900 mb-1 cursor-pointer hover:text-sage-700 transition-colors"
+                      onClick={() => handleViewProduct(product.id)}
+                    >
+                      {product.name}
+                    </h3>
                     <p className="text-sm text-sage-600 font-medium">{product.ingredients}</p>
                   </div>
                   <span className="text-xl font-bold text-sage-800">₹{product.price}</span>
@@ -122,12 +135,21 @@ const Products = () => {
                   ))}
                 </div>
                 
-                <Button 
-                  onClick={() => handleAddToCart(product)}
-                  className="w-full bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white py-3 shadow-lg hover:shadow-xl transition-all"
-                >
-                  Add to Collection
-                </Button>
+                <div className="flex gap-2">
+                  <Button 
+                    onClick={() => handleViewProduct(product.id)}
+                    variant="outline"
+                    className="flex-1 border-sage-300 text-sage-700 hover:bg-sage-50"
+                  >
+                    View Details
+                  </Button>
+                  <Button 
+                    onClick={() => handleAddToCart(product)}
+                    className="flex-1 bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white shadow-lg hover:shadow-xl transition-all"
+                  >
+                    Add to Cart
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
