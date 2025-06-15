@@ -2,17 +2,40 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 
 const Contact = () => {
   const { toast } = useToast();
-  const [email, setEmail] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+  
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simple validation
-    if (!email.trim() || !email.includes('@')) {
+    // Basic validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast({
+        title: "Please fill in all required fields",
+        description: "Name, email, and message are required.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    if (!formData.email.includes('@')) {
       toast({
         title: "Invalid email",
         description: "Please enter a valid email address.",
@@ -21,61 +44,147 @@ const Contact = () => {
       return;
     }
     
-    // Success notification
-    toast({
-      title: "Successfully subscribed!",
-      description: "Thank you for joining the Sameira community.",
-    });
+    setIsSubmitting(true);
     
-    // Reset form
-    setEmail('');
+    // Simulate form submission
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
     <section id="contact" className="section bg-sage-50">
       <div className="container-custom">
+        <div className="text-center mb-12">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-sage-900 mb-4">
+            Get in Touch
+          </h2>
+          <p className="text-sage-700 max-w-2xl mx-auto">
+            Have questions about our fragrances or need personalized recommendations? 
+            We'd love to hear from you.
+          </p>
+        </div>
+
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-sm overflow-hidden">
           <div className="md:flex">
             <div className="md:w-1/2 bg-[url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')] bg-cover bg-center p-12 flex items-end relative">
               <div className="absolute inset-0 bg-gradient-to-t from-sage-900/70 to-transparent"></div>
               <div className="relative text-white">
-                <h3 className="font-serif text-2xl font-medium mb-2">Connect With Us</h3>
-                <p className="text-white/90 text-sm">
-                  Join our community to receive updates, exclusive offers, and tips for natural living.
-                </p>
+                <h3 className="font-serif text-2xl font-medium mb-4">Connect With Us</h3>
+                <div className="space-y-3 text-white/90">
+                  <p className="flex items-center">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Handcrafted with love in India
+                  </p>
+                  <p className="flex items-center">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Direct from our partner farms
+                  </p>
+                  <p className="flex items-center">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Expert fragrance consultation
+                  </p>
+                </div>
               </div>
             </div>
             
             <div className="md:w-1/2 p-8 md:p-12">
-              <h3 className="font-serif text-2xl font-medium text-sage-900 mb-4">
-                Subscribe to Our Newsletter
-              </h3>
-              <p className="text-sage-700 mb-6">
-                Stay informed about new products, seasonal offerings, and expert advice on natural wellness.
-              </p>
-              
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-sage-800 mb-1">
+                      Name *
+                    </label>
+                    <Input 
+                      id="name"
+                      name="name"
+                      type="text" 
+                      placeholder="Your full name" 
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="border-sage-200 focus:border-sage-500 focus:ring focus:ring-sage-200 focus:ring-opacity-50"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-sage-800 mb-1">
+                      Email *
+                    </label>
+                    <Input 
+                      id="email"
+                      name="email"
+                      type="email" 
+                      placeholder="your@email.com" 
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="border-sage-200 focus:border-sage-500 focus:ring focus:ring-sage-200 focus:ring-opacity-50"
+                      required
+                    />
+                  </div>
+                </div>
+                
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-sage-800 mb-1">
-                    Email Address
+                  <label htmlFor="subject" className="block text-sm font-medium text-sage-800 mb-1">
+                    Subject
                   </label>
                   <Input 
-                    id="email"
-                    type="email" 
-                    placeholder="Your email address" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full border-sage-200 focus:border-sage-500 focus:ring focus:ring-sage-200 focus:ring-opacity-50"
+                    id="subject"
+                    name="subject"
+                    type="text" 
+                    placeholder="What's this about?" 
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="border-sage-200 focus:border-sage-500 focus:ring focus:ring-sage-200 focus:ring-opacity-50"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-sage-800 mb-1">
+                    Message *
+                  </label>
+                  <Textarea 
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your fragrance preferences, questions, or how we can help you..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="border-sage-200 focus:border-sage-500 focus:ring focus:ring-sage-200 focus:ring-opacity-50 min-h-[120px]"
                     required
                   />
                 </div>
                 
-                <Button type="submit" className="w-full bg-sage-700 hover:bg-sage-800 text-white">
-                  Subscribe
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
                 
                 <p className="text-xs text-sage-600 mt-4">
-                  By subscribing, you agree to our Privacy Policy and consent to receive updates from Sameira.
+                  We typically respond within 24 hours. Your information is kept private and secure.
                 </p>
               </form>
             </div>
