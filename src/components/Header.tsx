@@ -2,6 +2,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Leaf, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { useCart } from '@/contexts/CartContext';
 
 const Header = () => {
@@ -45,18 +51,27 @@ const Header = () => {
           <button onClick={() => handleSmoothScroll('benefits')} className="text-sage-800 hover:text-sage-600 transition font-medium">Benefits</button>
           <button onClick={() => handleSmoothScroll('contact')} className="text-sage-800 hover:text-sage-600 transition font-medium">Contact</button>
           
-          {/* Cart Icon */}
-          <button 
-            onClick={() => setIsCartOpen(true)}
-            className="relative p-2 text-sage-800 hover:text-sage-600 transition"
-          >
-            <ShoppingBag size={22} />
-            {getTotalItems() > 0 && (
-              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-sage-700 to-sage-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
-                {getTotalItems()}
-              </span>
-            )}
-          </button>
+          {/* Cart Icon with Tooltip */}
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button 
+                  onClick={() => setIsCartOpen(true)}
+                  className="relative p-2 text-sage-800 hover:text-sage-600 transition"
+                >
+                  <ShoppingBag size={22} />
+                  {getTotalItems() > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-gradient-to-r from-sage-700 to-sage-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
+                      {getTotalItems()}
+                    </span>
+                  )}
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Cart</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           
           <Button className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white shadow-lg hover:shadow-xl transition-all">
             Shop Luxury Oils
@@ -65,17 +80,26 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4">
-          <button 
-            onClick={() => setIsCartOpen(true)}
-            className="relative p-2 text-sage-800"
-          >
-            <ShoppingBag size={22} />
-            {getTotalItems() > 0 && (
-              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-sage-700 to-sage-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
-                {getTotalItems()}
-              </span>
-            )}
-          </button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button 
+                  onClick={() => setIsCartOpen(true)}
+                  className="relative p-2 text-sage-800"
+                >
+                  <ShoppingBag size={22} />
+                  {getTotalItems() > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-gradient-to-r from-sage-700 to-sage-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
+                      {getTotalItems()}
+                    </span>
+                  )}
+                </button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Cart</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           <button className="text-sage-800" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
