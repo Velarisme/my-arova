@@ -33,20 +33,13 @@ const Hero = () => {
             Crafted from rare botanicals and inspired by nature's purest rhythms, our fragrance oils are born on farms, refined in distilleries, and perfected through intentional blending. Feel the essence of real luxury.
           </p>
           
-          <div className="mt-12 flex flex-wrap gap-6 fade-in-delay-2">
+          <div className="mt-12 fade-in-delay-2">
             <Button 
               onClick={() => scrollToSection('products')}
               className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white px-8 py-4 text-lg group shadow-lg hover:shadow-xl transition-all"
             >
               🌿 Discover Our Blends
               <ArrowRight size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button 
-              onClick={() => scrollToSection('process')}
-              variant="outline" 
-              className="border-2 border-sage-300 text-sage-800 hover:bg-sage-50 px-8 py-4 text-lg shadow-md hover:shadow-lg transition-all"
-            >
-              🔁 Our Farm-to-Bottle Process
             </Button>
           </div>
         </div>
