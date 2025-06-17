@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Droplet } from 'lucide-react';
 
@@ -22,7 +23,7 @@ const Hero = () => {
         <div className="max-w-4xl">
           <p className="text-sm md:text-base font-medium text-sage-600 mb-3 tracking-wider fade-in uppercase flex items-center">
             <Droplet size={16} className="mr-2 animate-bounce text-sage-700" style={{ animationDuration: '3s' }} />
-            Premium Fragrance Oils
+            Premium Fragrance Oils from Kannauj
           </p>
           
           <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl font-medium text-sage-900 leading-tight fade-in mb-6">
@@ -30,7 +31,7 @@ const Hero = () => {
           </h1>
           
           <p className="mt-6 text-xl md:text-2xl text-sage-700 max-w-3xl fade-in-delay-1 font-light leading-relaxed">
-            Crafted from rare botanicals and inspired by nature's purest rhythms, our fragrance oils are born on farms, refined in distilleries, and perfected through intentional blending. Feel the essence of real luxury.
+            Sourced exclusively from Kannauj, the legendary "City of Perfumes" in India, our raw materials represent centuries of perfumery heritage. Crafted from rare botanicals and inspired by nature's purest rhythms, our fragrance oils are born on traditional farms, refined in time-honored distilleries, and perfected through intentional blending. Experience the authentic essence of luxury perfumery.
           </p>
           
           <div className="mt-12 fade-in-delay-2">
