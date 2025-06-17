@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Star } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
@@ -5,6 +6,13 @@ import { useToast } from '@/components/ui/use-toast';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ProductSkeleton from './ProductSkeleton';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Products = () => {
   const { addToCart } = useCart();
@@ -20,6 +28,12 @@ const Products = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const bottleImages = [
+    "/lovable-uploads/ef30d9dc-6a82-4761-a2e3-cac53db8b629.png",
+    "/lovable-uploads/c763a185-7ced-4bd3-84b4-0ed1ea387bad.png",
+    "/lovable-uploads/53b8b70c-6cba-424c-9fbe-fe2b823e532d.png"
+  ];
 
   const products = [
     {
@@ -123,6 +137,33 @@ const Products = () => {
             Fragrance oils designed to elevate your everyday rituals — each bottle a sensory journey.
           </p>
         </div>
+
+        {/* Bottle Slideshow */}
+        <div className="mb-16">
+          <div className="max-w-4xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {bottleImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-2">
+                      <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                        <div className="aspect-[4/5] overflow-hidden">
+                          <img 
+                            src={image}
+                            alt={`Fragrance bottle ${index + 1}`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+          </div>
+        </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-12">
           {products.map((product, index) => (
@@ -138,9 +179,9 @@ const Products = () => {
                     <span className="text-xs font-medium">{product.rating}</span>
                   </div>
                 </div>
-                {/* Bottle illustration placeholder */}
+                {/* Clean bottle illustration without brand tags */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-24 bg-gradient-to-b from-sage-700 to-sage-800 rounded-lg shadow-xl opacity-80 group-hover:scale-110 transition-transform"></div>
+                  <div className="w-16 h-24 bg-gradient-to-b from-white/20 to-white/10 rounded-lg shadow-xl opacity-80 group-hover:scale-110 transition-transform border border-white/30 backdrop-blur-sm"></div>
                 </div>
               </div>
               <div className="p-8">
