@@ -15,33 +15,33 @@ const Process = () => {
     <section id="process" className="section bg-gradient-to-b from-sage-50 to-white">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="font-serif text-3xl md:text-5xl font-medium text-sage-900 mb-6">Our Kannauj Heritage Process</h2>
+          <h2 className="font-serif text-3xl md:text-5xl font-medium text-sage-900 mb-6">Our Artisan Craft Process</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-sage-400 to-sage-600 mx-auto mb-8"></div>
           <p className="text-sage-700 text-lg leading-relaxed">
-            Every Arova blend honors the 400-year-old tradition of Kannauj, the perfume capital of India. Our partner farms in this historic city practice sustainable harvesting methods passed down through generations. Raw materials are sourced from certified organic fields and processed using traditional copper vessels within hours of harvest. No synthetic additives, no chemical accelerants — just pure botanical essence, captured and bottled with reverence.
+            Every Arova blend is crafted with meticulous attention to detail, honoring traditional perfumery methods while embracing modern sustainability practices. Our artisan process ensures each fragrance oil maintains its pure botanical essence, free from synthetic additives and chemical accelerants — just authentic aromatic compounds, captured and bottled with intention.
           </p>
         </div>
 
-        {/* Kannauj Heritage Section */}
+        {/* Artisan Heritage Section */}
         <div className="bg-gradient-to-r from-sage-100 to-sand-100 rounded-2xl p-8 mb-16 border border-sage-200">
           <div className="text-center mb-8">
-            <h3 className="font-serif text-2xl font-medium text-sage-900 mb-4">🏛️ The Kannauj Legacy</h3>
+            <h3 className="font-serif text-2xl font-medium text-sage-900 mb-4">🎨 The Arova Philosophy</h3>
             <p className="text-sage-700 text-lg">
-              Kannauj, known as the "Grasse of the East," has been the epicenter of Indian perfumery since the Mughal era. Our raw materials come from this sacred land where the art of attar-making has been perfected over centuries.
+              Our commitment to artisanal craftsmanship means every step of our process is guided by quality, sustainability, and respect for nature's gifts. We believe in creating fragrances that tell a story — your story.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div>
-              <h4 className="font-semibold text-sage-900 mb-2">🌾 Traditional Farms</h4>
-              <p className="text-sage-700 text-sm">Organic cultivation methods unchanged for generations</p>
+              <h4 className="font-semibold text-sage-900 mb-2">🌱 Sustainable Sourcing</h4>
+              <p className="text-sage-700 text-sm">Ethically sourced botanicals from certified organic farms</p>
             </div>
             <div>
-              <h4 className="font-semibold text-sage-900 mb-2">🔥 Copper Distillation</h4>
-              <p className="text-sage-700 text-sm">Ancient bhapka method using traditional copper vessels</p>
+              <h4 className="font-semibold text-sage-900 mb-2">⚗️ Artisan Distillation</h4>
+              <p className="text-sage-700 text-sm">Small-batch steam distillation preserving pure essence</p>
             </div>
             <div>
-              <h4 className="font-semibold text-sage-900 mb-2">👨‍🎨 Master Perfumers</h4>
-              <p className="text-sage-700 text-sm">Hereditary knowledge passed through family lineages</p>
+              <h4 className="font-semibold text-sage-900 mb-2">🎭 Master Blending</h4>
+              <p className="text-sage-700 text-sm">Expertly crafted formulations based on aromatherapy principles</p>
             </div>
           </div>
         </div>
@@ -52,24 +52,24 @@ const Process = () => {
             <div className="aspect-square bg-gradient-to-br from-green-100 to-sage-200 rounded-2xl mb-6 overflow-hidden shadow-lg group-hover:shadow-xl transition-all">
               <div className="h-full bg-[url('https://images.unsplash.com/photo-1472396961693-142e6e269027')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🌱 Kannauj Fields</h3>
-            <p className="text-sage-700">Handpicked botanicals from certified organic farms in the perfume capital of India.</p>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🌿 Botanical Gardens</h3>
+            <p className="text-sage-700">Handpicked botanicals from our network of certified organic farms worldwide.</p>
           </div>
           
           <div className="text-center group">
             <div className="aspect-square bg-gradient-to-br from-orange-100 to-amber-200 rounded-2xl mb-6 overflow-hidden shadow-lg group-hover:shadow-xl transition-all">
               <div className="h-full bg-[url('https://images.unsplash.com/photo-1518495973542-4542c06a5843')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🔥 Traditional Bhapka</h3>
-            <p className="text-sage-700">Ancient steam distillation in handcrafted copper vessels using sandalwood fire.</p>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">⚗️ Artisan Distillery</h3>
+            <p className="text-sage-700">Small-batch steam distillation in handcrafted copper stills.</p>
           </div>
           
           <div className="text-center group">
             <div className="aspect-square bg-gradient-to-br from-sage-100 to-sand-200 rounded-2xl mb-6 overflow-hidden shadow-lg group-hover:shadow-xl transition-all">
               <div className="h-full bg-[url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🎁 Heritage Bottling</h3>
-            <p className="text-sage-700">Each glass roll-on is hand-filled following time-honored traditions.</p>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🎁 Handcrafted Bottles</h3>
+            <p className="text-sage-700">Each glass roll-on is hand-filled and labeled with care.</p>
           </div>
         </div>
         
@@ -80,7 +80,7 @@ const Process = () => {
             </div>
             <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">1. Selection</h3>
             <p className="text-sage-700 leading-relaxed">
-              Hand-picked botanicals at peak potency from certified organic farms in historic Kannauj.
+              Hand-picked botanicals at peak potency from certified organic farms worldwide.
             </p>
           </div>
           
@@ -90,7 +90,7 @@ const Process = () => {
             </div>
             <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">2. Distillation</h3>
             <p className="text-sage-700 leading-relaxed">
-              Traditional bhapka method using copper vessels and sandalwood fire, releasing pure aromatic compounds.
+              Gentle steam distillation using artisan copper stills, preserving delicate aromatic compounds.
             </p>
           </div>
           
@@ -98,9 +98,9 @@ const Process = () => {
             <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
               <Droplets className="text-sage-700" size={32} />
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">3. Separation</h3>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">3. Purification</h3>
             <p className="text-sage-700 leading-relaxed">
-              Natural cooling and separation process preserving the purest essential compounds.
+              Natural filtration and separation process ensuring the purest essential oil quality.
             </p>
           </div>
           
@@ -110,28 +110,28 @@ const Process = () => {
             </div>
             <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">4. Blending</h3>
             <p className="text-sage-700 leading-relaxed">
-              Master perfumers craft signature formulations using hereditary knowledge and scent psychology.
+              Expert formulation using aromatherapy principles and modern scent psychology.
             </p>
           </div>
         </div>
         
         <div className="text-center space-y-4">
           <Button className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all mr-4">
-            🔍 Explore the Full Process
+            🔍 Explore Our Artisan Process
           </Button>
           
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="outline" className="border-2 border-sage-300 text-sage-800 hover:bg-sage-50 px-8 py-4 text-lg shadow-md hover:shadow-lg transition-all">
                 <Shield className="mr-2" size={20} />
-                Lab Standards & Certifications
+                Quality Standards & Certifications
               </Button>
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
               <DialogHeader>
                 <DialogTitle className="text-2xl font-serif text-sage-900 flex items-center">
                   <Award className="mr-3 text-sage-700" size={28} />
-                  Laboratory Standards & Certifications
+                  Quality Standards & Certifications
                 </DialogTitle>
                 <DialogDescription className="text-sage-700 text-lg">
                   Our commitment to quality, safety, and authenticity
@@ -156,7 +156,7 @@ const Process = () => {
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">✅ USDA Organic</h4>
-                      <p className="text-sage-700 text-sm">Certified organic ingredients sourced from verified organic farms in Kannauj.</p>
+                      <p className="text-sage-700 text-sm">Certified organic ingredients sourced from verified organic farms worldwide.</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">✅ Cruelty-Free</h4>
@@ -207,8 +207,8 @@ const Process = () => {
                       <p className="text-sage-700 text-sm">Meets EC 1223/2009 cosmetics regulation requirements.</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
-                      <h4 className="font-semibold text-sage-900 mb-2">🇮🇳 BIS Standards</h4>
-                      <p className="text-sage-700 text-sm">Bureau of Indian Standards compliance for cosmetic products.</p>
+                      <h4 className="font-semibold text-sage-900 mb-2">🌐 International Standards</h4>
+                      <p className="text-sage-700 text-sm">Compliant with international cosmetic safety standards.</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">🌐 IFRA Certified</h4>
@@ -229,7 +229,7 @@ const Process = () => {
                     <p><strong>Shelf Life:</strong> Best used within 24 months of opening. Batch numbers and expiry dates are printed on each product.</p>
                     <p><strong>Liability:</strong> Individual skin sensitivities may vary. Discontinue use if irritation occurs and consult a healthcare professional.</p>
                     <p><strong>Trademark:</strong> Arova™ is a registered trademark. All rights reserved.</p>
-                    <p><strong>Manufacturing Location:</strong> Proudly made in India using traditional methods from Kannauj.</p>
+                    <p><strong>Manufacturing:</strong> Proudly crafted using artisanal methods and premium ingredients.</p>
                   </div>
                 </div>
 
@@ -238,7 +238,7 @@ const Process = () => {
                   <h4 className="font-semibold text-sage-900 mb-2">📞 Quality Assurance Contact</h4>
                   <p className="text-sage-700 text-sm">
                     For quality concerns or certification inquiries, contact our QA team at: 
-                    <br />Email: quality@arova.com | Phone: +91-XXXX-XXXXXX
+                    <br />Email: quality@arova.com | Phone: +1-XXX-XXX-XXXX
                   </p>
                 </div>
               </div>
