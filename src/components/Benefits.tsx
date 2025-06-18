@@ -20,7 +20,7 @@ const Benefits = () => {
             </div>
             <h3 className="font-serif text-xl font-medium text-sage-800 mb-3">Mood Enhancement</h3>
             <p className="text-sage-700">
-              Experience the aromatherapeutic properties that elevate mood, reduce stress, and promote emotional balance.
+              Experience the uplifting properties of fine fragrance that elevate mood, reduce stress, and promote emotional balance through scent.
             </p>
           </div>
           
@@ -28,9 +28,9 @@ const Benefits = () => {
             <div className="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-4">
               <Star className="text-sage-700" size={20} />
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-800 mb-3">Natural Fragrance</h3>
+            <h3 className="font-serif text-xl font-medium text-sage-800 mb-3">Signature Scent</h3>
             <p className="text-sage-700">
-              Infuse your personal space with pure, chemical-free fragrances that refresh and inspire throughout the day.
+              Create your unique scent identity with our carefully crafted fragrance oils that adapt beautifully to your skin chemistry.
             </p>
           </div>
           
@@ -40,7 +40,7 @@ const Benefits = () => {
             </div>
             <h3 className="font-serif text-xl font-medium text-sage-800 mb-3">Emotional Wellness</h3>
             <p className="text-sage-700">
-              Our carefully crafted blends help create positive emotional states and reduce daily stress naturally.
+              Our thoughtfully crafted fragrance blends help create positive emotional states and reduce daily stress naturally through aromatherapy.
             </p>
           </div>
           
@@ -50,7 +50,7 @@ const Benefits = () => {
             </div>
             <h3 className="font-serif text-xl font-medium text-sage-800 mb-3">Confidence Boost</h3>
             <p className="text-sage-700">
-              Signature scents that enhance your personal presence and leave lasting impressions wherever you go.
+              Signature fragrance oils that enhance your personal presence and leave lasting impressions wherever you go.
             </p>
           </div>
         </div>
@@ -62,8 +62,8 @@ const Benefits = () => {
                 Elevate Your Daily Fragrance Rituals
               </h3>
               <p className="text-sage-700">
-                Incorporating Arova oils into your everyday life transforms ordinary moments into extraordinary experiences. 
-                Discover countless ways to enjoy the mood-enhancing benefits of nature's purest fragrances.
+                Incorporating Arova fragrance oils into your everyday life transforms ordinary moments into extraordinary experiences. 
+                Discover countless ways to enjoy the mood-enhancing benefits of premium fragrance craftsmanship.
               </p>
             </div>
             

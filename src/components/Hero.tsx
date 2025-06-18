@@ -31,7 +31,7 @@ const Hero = () => {
           </h1>
           
           <p className="mt-6 text-xl md:text-2xl text-sage-700 max-w-3xl fade-in-delay-1 font-light leading-relaxed">
-            Crafted from the finest botanicals and inspired by nature's purest rhythms, our fragrance oils are born from sustainable farms, refined through artisanal distillation, and perfected through intentional blending. Each drop captures the authentic essence of luxury perfumery, designed to elevate your daily rituals and connect you with the natural world.
+            Crafted from the finest botanical ingredients and inspired by nature's purest rhythms, our fragrance oils are born from sustainable farms, refined through artisanal blending, and perfected through intentional curation. Each drop captures the luxurious essence of fine perfumery, designed to elevate your daily rituals and express your unique personality through scent.
           </p>
           
           <div className="mt-12 fade-in-delay-2">

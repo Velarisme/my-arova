@@ -18,7 +18,7 @@ const Process = () => {
           <h2 className="font-serif text-3xl md:text-5xl font-medium text-sage-900 mb-6">Our Artisan Craft Process</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-sage-400 to-sage-600 mx-auto mb-8"></div>
           <p className="text-sage-700 text-lg leading-relaxed">
-            Every Arova blend is crafted with meticulous attention to detail, honoring traditional perfumery methods while embracing modern sustainability practices. Our artisan process ensures each fragrance oil maintains its pure botanical essence, free from synthetic additives and chemical accelerants — just authentic aromatic compounds, captured and bottled with intention.
+            Every Arova blend is crafted with meticulous attention to detail, honoring traditional perfumery methods while embracing modern sustainability practices. Our artisan process ensures each fragrance oil maintains its pure botanical essence and sophisticated scent profile — just authentic aromatic compounds, blended and bottled with intention.
           </p>
         </div>
 
@@ -32,16 +32,16 @@ const Process = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div>
-              <h4 className="font-semibold text-sage-900 mb-2">🌱 Sustainable Sourcing</h4>
-              <p className="text-sage-700 text-sm">Ethically sourced botanicals from certified organic farms</p>
+              <h4 className="font-semibold text-sage-900 mb-2">🌱 Premium Ingredients</h4>
+              <p className="text-sage-700 text-sm">Ethically sourced botanical extracts and premium fragrance compounds</p>
             </div>
             <div>
-              <h4 className="font-semibold text-sage-900 mb-2">⚗️ Artisan Distillation</h4>
-              <p className="text-sage-700 text-sm">Small-batch steam distillation preserving pure essence</p>
+              <h4 className="font-semibold text-sage-900 mb-2">⚗️ Expert Blending</h4>
+              <p className="text-sage-700 text-sm">Small-batch perfumery techniques preserving scent complexity</p>
             </div>
             <div>
-              <h4 className="font-semibold text-sage-900 mb-2">🎭 Master Blending</h4>
-              <p className="text-sage-700 text-sm">Expertly crafted formulations based on aromatherapy principles</p>
+              <h4 className="font-semibold text-sage-900 mb-2">🎭 Signature Formulations</h4>
+              <p className="text-sage-700 text-sm">Expertly crafted blends based on modern perfumery principles</p>
             </div>
           </div>
         </div>
@@ -52,16 +52,16 @@ const Process = () => {
             <div className="aspect-square bg-gradient-to-br from-green-100 to-sage-200 rounded-2xl mb-6 overflow-hidden shadow-lg group-hover:shadow-xl transition-all">
               <div className="h-full bg-[url('https://images.unsplash.com/photo-1472396961693-142e6e269027')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🌿 Botanical Gardens</h3>
-            <p className="text-sage-700">Handpicked botanicals from our network of certified organic farms worldwide.</p>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🌿 Botanical Sources</h3>
+            <p className="text-sage-700">Premium botanical extracts and fragrance compounds from trusted suppliers worldwide.</p>
           </div>
           
           <div className="text-center group">
             <div className="aspect-square bg-gradient-to-br from-orange-100 to-amber-200 rounded-2xl mb-6 overflow-hidden shadow-lg group-hover:shadow-xl transition-all">
               <div className="h-full bg-[url('https://images.unsplash.com/photo-1518495973542-4542c06a5843')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">⚗️ Artisan Distillery</h3>
-            <p className="text-sage-700">Small-batch steam distillation in handcrafted copper stills.</p>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">⚗️ Perfumery Lab</h3>
+            <p className="text-sage-700">Precision blending in our dedicated fragrance laboratory using professional equipment.</p>
           </div>
           
           <div className="text-center group">
@@ -69,7 +69,7 @@ const Process = () => {
               <div className="h-full bg-[url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
             </div>
             <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🎁 Handcrafted Bottles</h3>
-            <p className="text-sage-700">Each glass roll-on is hand-filled and labeled with care.</p>
+            <p className="text-sage-700">Each glass roll-on is hand-filled and labeled with care in small batches.</p>
           </div>
         </div>
         
@@ -78,29 +78,9 @@ const Process = () => {
             <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
               <Sparkles className="text-sage-700" size={32} />
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">1. Selection</h3>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">1. Sourcing</h3>
             <p className="text-sage-700 leading-relaxed">
-              Hand-picked botanicals at peak potency from certified organic farms worldwide.
-            </p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
-              <Flame className="text-sage-700" size={32} />
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">2. Distillation</h3>
-            <p className="text-sage-700 leading-relaxed">
-              Gentle steam distillation using artisan copper stills, preserving delicate aromatic compounds.
-            </p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
-              <Droplets className="text-sage-700" size={32} />
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">3. Purification</h3>
-            <p className="text-sage-700 leading-relaxed">
-              Natural filtration and separation process ensuring the purest essential oil quality.
+              Premium botanical extracts and fragrance compounds sourced from reputable suppliers worldwide.
             </p>
           </div>
           
@@ -108,9 +88,29 @@ const Process = () => {
             <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
               <FlaskConical className="text-sage-700" size={32} />
             </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">4. Blending</h3>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">2. Formulation</h3>
             <p className="text-sage-700 leading-relaxed">
-              Expert formulation using aromatherapy principles and modern scent psychology.
+              Expert blending using perfumery techniques to create complex, long-lasting fragrance profiles.
+            </p>
+          </div>
+          
+          <div className="text-center group">
+            <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
+              <Droplets className="text-sage-700" size={32} />
+            </div>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">3. Maturation</h3>
+            <p className="text-sage-700 leading-relaxed">
+              Careful aging process allowing fragrance notes to harmonize and develop full complexity.
+            </p>
+          </div>
+          
+          <div className="text-center group">
+            <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
+              <Flame className="text-sage-700" size={32} />
+            </div>
+            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">4. Bottling</h3>
+            <p className="text-sage-700 leading-relaxed">
+              Hand-filling each bottle in small batches ensuring consistent quality and freshness.
             </p>
           </div>
         </div>
@@ -134,7 +134,7 @@ const Process = () => {
                   Quality Standards & Certifications
                 </DialogTitle>
                 <DialogDescription className="text-sage-700 text-lg">
-                  Our commitment to quality, safety, and authenticity
+                  Our commitment to quality, safety, and authenticity in fragrance oil production
                 </DialogDescription>
               </DialogHeader>
               
@@ -148,15 +148,15 @@ const Process = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">✅ ISO 9001:2015</h4>
-                      <p className="text-sage-700 text-sm">Quality Management Systems certification ensuring consistent product quality and customer satisfaction.</p>
+                      <p className="text-sage-700 text-sm">Quality Management Systems certification ensuring consistent fragrance oil quality and customer satisfaction.</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">✅ GMP Certified</h4>
-                      <p className="text-sage-700 text-sm">Good Manufacturing Practices certification for pharmaceutical-grade production standards.</p>
+                      <p className="text-sage-700 text-sm">Good Manufacturing Practices certification for cosmetic-grade fragrance oil production standards.</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
-                      <h4 className="font-semibold text-sage-900 mb-2">✅ USDA Organic</h4>
-                      <p className="text-sage-700 text-sm">Certified organic ingredients sourced from verified organic farms worldwide.</p>
+                      <h4 className="font-semibold text-sage-900 mb-2">✅ Premium Ingredients</h4>
+                      <p className="text-sage-700 text-sm">High-quality fragrance compounds and botanical extracts from certified suppliers.</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">✅ Cruelty-Free</h4>
@@ -172,23 +172,23 @@ const Process = () => {
                     <ul className="space-y-3 text-sage-700">
                       <li className="flex items-start">
                         <span className="text-sage-600 mr-2">•</span>
-                        <span><strong>Microbiological Testing:</strong> Bacterial, yeast, and mold contamination screening</span>
+                        <span><strong>Fragrance Stability Testing:</strong> Long-term scent performance and longevity analysis</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-sage-600 mr-2">•</span>
-                        <span><strong>Heavy Metals Analysis:</strong> Lead, mercury, cadmium, and arsenic testing</span>
+                        <span><strong>Skin Compatibility Testing:</strong> Dermatological safety assessment for topical application</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-sage-600 mr-2">•</span>
-                        <span><strong>Pesticide Residue Testing:</strong> Multi-residue analysis for over 300 pesticides</span>
+                        <span><strong>Purity Analysis:</strong> Chemical composition verification of fragrance compounds</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-sage-600 mr-2">•</span>
-                        <span><strong>Gas Chromatography-Mass Spectrometry (GC-MS):</strong> Chemical composition verification</span>
+                        <span><strong>Gas Chromatography Testing:</strong> Quality assurance of fragrance oil composition</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-sage-600 mr-2">•</span>
-                        <span><strong>Allergen Testing:</strong> EU regulatory compliance for known allergens</span>
+                        <span><strong>Allergen Testing:</strong> EU regulatory compliance for known fragrance allergens</span>
                       </li>
                     </ul>
                   </div>
@@ -200,19 +200,19 @@ const Process = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">🇺🇸 FDA Compliant</h4>
-                      <p className="text-sage-700 text-sm">Complies with FDA regulations for cosmetic products (21 CFR 700-740).</p>
+                      <p className="text-sage-700 text-sm">Complies with FDA regulations for cosmetic fragrance products (21 CFR 700-740).</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">🇪🇺 EU Cosmetics Regulation</h4>
-                      <p className="text-sage-700 text-sm">Meets EC 1223/2009 cosmetics regulation requirements.</p>
+                      <p className="text-sage-700 text-sm">Meets EC 1223/2009 cosmetics regulation requirements for fragrance oils.</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">🌐 International Standards</h4>
-                      <p className="text-sage-700 text-sm">Compliant with international cosmetic safety standards.</p>
+                      <p className="text-sage-700 text-sm">Compliant with international cosmetic safety standards for fragrance products.</p>
                     </div>
                     <div className="bg-sage-50 p-4 rounded-lg border border-sage-200">
                       <h4 className="font-semibold text-sage-900 mb-2">🌐 IFRA Certified</h4>
-                      <p className="text-sage-700 text-sm">International Fragrance Association safety standards compliance.</p>
+                      <p className="text-sage-700 text-sm">International Fragrance Association safety standards compliance for all formulations.</p>
                     </div>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ const Process = () => {
                     <p><strong>Shelf Life:</strong> Best used within 24 months of opening. Batch numbers and expiry dates are printed on each product.</p>
                     <p><strong>Liability:</strong> Individual skin sensitivities may vary. Discontinue use if irritation occurs and consult a healthcare professional.</p>
                     <p><strong>Trademark:</strong> Arova™ is a registered trademark. All rights reserved.</p>
-                    <p><strong>Manufacturing:</strong> Proudly crafted using artisanal methods and premium ingredients.</p>
+                    <p><strong>Manufacturing:</strong> Proudly crafted using artisanal perfumery methods and premium fragrance ingredients.</p>
                   </div>
                 </div>
 
