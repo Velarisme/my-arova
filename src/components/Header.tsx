@@ -39,15 +39,18 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5'}`}>
       <div className="container-custom flex justify-between items-center">
         <a href="/" className="font-serif text-2xl font-medium text-sage-800 flex items-center group">
-          <Leaf className="mr-2 text-sage-600 group-hover:text-sage-700 transition-colors duration-300" size={22} />
+          <img 
+            src="/lovable-uploads/8fae57e4-3f26-41b0-8d03-5424b8ac18e4.png" 
+            alt="Arova Logo" 
+            className="mr-3 h-8 w-8 group-hover:scale-110 transition-transform duration-300"
+          />
           <span className="group-hover:text-sage-900 transition-colors duration-300">Arova</span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <button onClick={() => handleSmoothScroll('about')} className="text-sage-800 hover:text-sage-600 transition font-medium">Heritage</button>
+          <button onClick={() => handleSmoothScroll('products')} className="text-sage-800 hover:text-sage-600 transition font-medium">Shop Luxury Oils</button>
           <button onClick={() => handleSmoothScroll('products')} className="text-sage-800 hover:text-sage-600 transition font-medium">Collection</button>
-          <button onClick={() => handleSmoothScroll('process')} className="text-sage-800 hover:text-sage-600 transition font-medium">Process</button>
           <button onClick={() => handleSmoothScroll('benefits')} className="text-sage-800 hover:text-sage-600 transition font-medium">Benefits</button>
           <button onClick={() => handleSmoothScroll('contact')} className="text-sage-800 hover:text-sage-600 transition font-medium">Contact</button>
           
@@ -110,14 +113,11 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md absolute top-full left-0 right-0 shadow-lg animate-in slide-in-from-top-2 duration-200">
           <div className="container-custom py-6 flex flex-col space-y-4">
-            <button onClick={() => handleSmoothScroll('about')} className="text-sage-800 py-3 border-b border-sage-100 font-medium text-left">
-              Heritage
+            <button onClick={() => handleSmoothScroll('products')} className="text-sage-800 py-3 border-b border-sage-100 font-medium text-left">
+              Shop Luxury Oils
             </button>
             <button onClick={() => handleSmoothScroll('products')} className="text-sage-800 py-3 border-b border-sage-100 font-medium text-left">
               Collection
-            </button>
-            <button onClick={() => handleSmoothScroll('process')} className="text-sage-800 py-3 border-b border-sage-100 font-medium text-left">
-              Process
             </button>
             <button onClick={() => handleSmoothScroll('benefits')} className="text-sage-800 py-3 border-b border-sage-100 font-medium text-left">
               Benefits

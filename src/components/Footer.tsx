@@ -7,10 +7,15 @@ const Footer = () => {
   return (
     <footer className="bg-sage-800 text-white pt-12 pb-6">
       <div className="container-custom">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div>
             <h3 className="font-serif text-xl font-medium mb-4 flex items-center">
-              <Leaf size={18} className="mr-2" /> Arova
+              <img 
+                src="/lovable-uploads/8fae57e4-3f26-41b0-8d03-5424b8ac18e4.png" 
+                alt="Arova Logo" 
+                className="mr-2 h-5 w-5 brightness-0 invert"
+              />
+              Arova
             </h3>
             <p className="text-sage-200 text-sm mb-4">
               From Earth to Essence: Premium fragrance oils crafted with intention for your wellness and luxury rituals.
@@ -29,17 +34,6 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-medium mb-4 text-sage-100">Our Blends</h4>
-            <ul className="space-y-2 text-sm text-sage-300">
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Digest</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Breathe</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Immune</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Headspace</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Sleep</a></li>
-            </ul>
-          </div>
-          
-          <div>
             <h4 className="font-medium mb-4 text-sage-100">Quick Links</h4>
             <ul className="space-y-2 text-sm text-sage-300">
               <li className="flex items-center">
@@ -51,7 +45,6 @@ const Footer = () => {
                 <a href="#" className="hover:text-white transition">@ArovaEssence</a>
               </li>
               <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Our Heritage</a></li>
-              <li><a href="#" className="hover:text-white transition hover:translate-x-1 inline-block">Farm Partners</a></li>
             </ul>
           </div>
           

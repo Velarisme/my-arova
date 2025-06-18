@@ -26,10 +26,10 @@ const Contact = () => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (!formData.name.trim() || !formData.email.trim()) {
       toast({
         title: "Please fill in all required fields",
-        description: "Name, email, and message are required.",
+        description: "Name and email are required.",
         variant: "destructive"
       });
       return;
@@ -101,10 +101,6 @@ const Contact = () => {
                     <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                     Direct from our partner farms
                   </p>
-                  <p className="flex items-center">
-                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                    Expert fragrance consultation
-                  </p>
                 </div>
               </div>
             </div>
@@ -162,7 +158,7 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-sage-800 mb-1">
-                    Message *
+                    Message
                   </label>
                   <Textarea 
                     id="message"
@@ -171,7 +167,6 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="border-sage-200 focus:border-sage-500 focus:ring focus:ring-sage-200 focus:ring-opacity-50 min-h-[120px]"
-                    required
                   />
                 </div>
                 
