@@ -165,7 +165,7 @@ const Products = () => {
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {products.map((product, index) => (
             <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-1">
               <div 
@@ -228,12 +228,6 @@ const Products = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Button className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all">
-            🛒 View All Products
-          </Button>
         </div>
       </div>
     </section>

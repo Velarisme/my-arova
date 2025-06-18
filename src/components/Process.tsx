@@ -1,6 +1,6 @@
 
-import { Droplets, Flame, FlaskConical, Sparkles, Award, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Award, Shield } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -45,81 +45,8 @@ const Process = () => {
             </div>
           </div>
         </div>
-
-        {/* Visual Collage Section */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center group">
-            <div className="aspect-square bg-gradient-to-br from-green-100 to-sage-200 rounded-2xl mb-6 overflow-hidden shadow-lg group-hover:shadow-xl transition-all">
-              <div className="h-full bg-[url('https://images.unsplash.com/photo-1472396961693-142e6e269027')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🌿 Botanical Sources</h3>
-            <p className="text-sage-700">Premium botanical extracts and fragrance compounds from trusted suppliers worldwide.</p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="aspect-square bg-gradient-to-br from-orange-100 to-amber-200 rounded-2xl mb-6 overflow-hidden shadow-lg group-hover:shadow-xl transition-all">
-              <div className="h-full bg-[url('https://images.unsplash.com/photo-1518495973542-4542c06a5843')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">⚗️ Perfumery Lab</h3>
-            <p className="text-sage-700">Precision blending in our dedicated fragrance laboratory using professional equipment.</p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="aspect-square bg-gradient-to-br from-sage-100 to-sand-200 rounded-2xl mb-6 overflow-hidden shadow-lg group-hover:shadow-xl transition-all">
-              <div className="h-full bg-[url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9')] bg-cover bg-center group-hover:scale-105 transition-transform duration-500"></div>
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-2">🎁 Handcrafted Bottles</h3>
-            <p className="text-sage-700">Each glass roll-on is hand-filled and labeled with care in small batches.</p>
-          </div>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="text-center group">
-            <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
-              <Sparkles className="text-sage-700" size={32} />
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">1. Sourcing</h3>
-            <p className="text-sage-700 leading-relaxed">
-              Premium botanical extracts and fragrance compounds sourced from reputable suppliers worldwide.
-            </p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
-              <FlaskConical className="text-sage-700" size={32} />
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">2. Formulation</h3>
-            <p className="text-sage-700 leading-relaxed">
-              Expert blending using perfumery techniques to create complex, long-lasting fragrance profiles.
-            </p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
-              <Droplets className="text-sage-700" size={32} />
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">3. Maturation</h3>
-            <p className="text-sage-700 leading-relaxed">
-              Careful aging process allowing fragrance notes to harmonize and develop full complexity.
-            </p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-24 h-24 bg-gradient-to-br from-sage-100 to-sage-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
-              <Flame className="text-sage-700" size={32} />
-            </div>
-            <h3 className="font-serif text-xl font-medium text-sage-900 mb-4">4. Bottling</h3>
-            <p className="text-sage-700 leading-relaxed">
-              Hand-filling each bottle in small batches ensuring consistent quality and freshness.
-            </p>
-          </div>
-        </div>
         
         <div className="text-center space-y-4">
-          <Button className="bg-gradient-to-r from-sage-700 to-sage-800 hover:from-sage-800 hover:to-sage-900 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all mr-4">
-            🔍 Explore Our Artisan Process
-          </Button>
-          
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="outline" className="border-2 border-sage-300 text-sage-800 hover:bg-sage-50 px-8 py-4 text-lg shadow-md hover:shadow-lg transition-all">
