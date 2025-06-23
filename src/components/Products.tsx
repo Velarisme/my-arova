@@ -72,6 +72,66 @@ const Products = () => {
       gradient: "from-indigo-100 via-purple-200 to-blue-300",
       tags: ["Peaceful", "Calming", "Restful"],
       rating: 4.9
+    },
+    {
+      id: "aurum-tide",
+      name: "Aurum Tide",
+      price: 679,
+      ingredients: "Marine Accord | Golden Amber | Sea Salt",
+      description: "Luxurious oceanic fragrance with golden warmth.",
+      gradient: "from-amber-100 via-blue-200 to-gold-300",
+      tags: ["Luxurious", "Marine", "Golden"],
+      rating: 4.7
+    },
+    {
+      id: "silva-bleu",
+      name: "Silva Bleu",
+      price: 679,
+      ingredients: "Silver Pine | Blue Iris | Cedar",
+      description: "Forest-inspired elegance with silvery blue notes.",
+      gradient: "from-blue-100 via-slate-200 to-green-300",
+      tags: ["Elegant", "Forest", "Fresh"],
+      rating: 4.8
+    },
+    {
+      id: "bleu-dusk",
+      name: "Bleu Dusk",
+      price: 679,
+      ingredients: "Twilight Musk | Blue Lavender | Sandalwood",
+      description: "Mysterious evening fragrance with twilight essence.",
+      gradient: "from-indigo-100 via-slate-200 to-purple-300",
+      tags: ["Mysterious", "Evening", "Sophisticated"],
+      rating: 4.9
+    },
+    {
+      id: "velour-heat",
+      name: "Velour Heat",
+      price: 679,
+      ingredients: "Warm Spices | Velvet Rose | Amber",
+      description: "Sensual warmth with velvety smooth finish.",
+      gradient: "from-red-100 via-rose-200 to-amber-300",
+      tags: ["Sensual", "Warm", "Velvety"],
+      rating: 4.8
+    },
+    {
+      id: "musk-glace",
+      name: "Musk Glacé",
+      price: 679,
+      ingredients: "White Musk | Icy Mint | Crystal Accord",
+      description: "Cool, crystalline musk with icy freshness.",
+      gradient: "from-cyan-100 via-blue-200 to-slate-300",
+      tags: ["Cool", "Fresh", "Crystalline"],
+      rating: 4.7
+    },
+    {
+      id: "cloud-oud",
+      name: "Cloud Oud",
+      price: 679,
+      ingredients: "Soft Oud | Cloud Musk | Vanilla Sky",
+      description: "Ethereal oud blend that floats like clouds.",
+      gradient: "from-gray-100 via-purple-200 to-pink-300",
+      tags: ["Ethereal", "Luxurious", "Dreamy"],
+      rating: 4.9
     }
   ];
 
@@ -105,7 +165,7 @@ const Products = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-12">
-            {Array.from({ length: 6 }).map((_, index) => (
+            {Array.from({ length: 11 }).map((_, index) => (
               <ProductSkeleton key={index} />
             ))}
           </div>
